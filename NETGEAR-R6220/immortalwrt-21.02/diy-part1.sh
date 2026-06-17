@@ -1,18 +1,22 @@
 #!/bin/bash
-#
+#=============================================================
 # https://github.com/P3TERX/Actions-OpenWrt
 # File name: diy-part1.sh
 # Description: OpenWrt DIY script part 1 (Before Update feeds)
-#
-# Copyright (c) 2019-2024 P3TERX <https://p3terx.com>
-#
-# This is free software, licensed under the MIT License.
-# See /LICENSE for more information.
-#
+# Lisence: MIT
+# Author: P3TERX
+# Blog: https://p3terx.com
+#=============================================================
 
-# Uncomment a feed source
-#sed -i 's/^#\(.*helloworld\)/\1/' feeds.conf.default
-#sed -i 's_https\?://downloads.openwrt.org_https://mirrors.cernet.edu.cn/openwrt_' /etc/opkg/distfeeds.conf
-# Add a feed source
-#echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
-#echo 'src-git passwall https://github.com/xiaorouji/openwrt-passwall' >>feeds.conf.default
+### 添加第三方订阅源
+# sed -i '$a src-git-full small https://github.com/kenzok8/small-package' feeds.conf.default
+# sed -i '$a src-git-full small https://github.com/Xghng/kenzok8-small-package' feeds.conf.default
+# sed -i '$a src-git NueXini_Packages https://github.com/NueXini/NueXini_Packages.git' feeds.conf.default
+# sed -i '$a src-git NueXini_Packages https://github.com/Xghng/NueXini_Packages.git' feeds.conf.default
+# echo 'src-git control-weburl https://github.com/Xghng/luci-app-control-weburl' feeds.conf.default
+# echo 'src-git helloworld https://github.com/fw876/helloworld' >>feeds.conf.default
+# sed -i '$a src-git passwall https://github.com/xiaorouji/openwrt-passwall' feeds.conf.default
+# sed -i '$a src-git helloworld https://github.com/P3TERX/helloworld' feeds.conf.default
+# cd lede
+# sed -i '$a src-git NueXini_Packages https://github.com/Xghng/NueXini_Packages.git' feeds.conf.default
+# ./scripts/feeds update -a && ./scripts/feeds install -a
