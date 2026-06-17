@@ -10,7 +10,7 @@
 # See /LICENSE for more information.
 #
 
-name: immortalwrt-21.02-xiaomi-mini
+name: immortalwrt-21.02-xiaomi-mini-3
 
 on:
   repository_dispatch:
